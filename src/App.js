@@ -123,16 +123,16 @@ class App extends Component {
                       <h3>What would you like to see?</h3>
                       <div>
                         <MenuItem name="Bio" onClick={this.click}>
-                          Tell me a little about yourself
+                          Tell you a little about myself.
                         </MenuItem>
                         <MenuItem name="Skills" onClick={this.click}>
-                          What are you even good at?
+                          What am I even good at?
                         </MenuItem>
                         <MenuItem name="Projects" onClick={this.click}>
-                          What projects have you worked on?
+                          What projects I have worked on?
                         </MenuItem>
                         <MenuItem name="Joke" onClick={this.click}>
-                          Tell me a Chuck Norris joke!
+                          Tell me a joke!
                         </MenuItem>
                       </div>
                     </div>
