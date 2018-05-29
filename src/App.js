@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import {
-  ParallaxLayer,
-  Parallax,
-  Spring,
-  Keyframes,
-  animated
-} from 'react-spring';
+import { Spring, Keyframes, animated } from 'react-spring';
 import delay from 'delay';
 
-import TestCompOne from './Components/TestCompOne/TestCompOne.jsx';
-import TestCompTwo from './Components/TestCompTwo/TestCompTwo.jsx';
 import AboutMeComp from './Components/AboutMeComp/AboutMeComp';
 import BioComp from './Components/BioComp/BioComp';
 import SkillsComp from './Components/SkillsComp/SkillsComp';
