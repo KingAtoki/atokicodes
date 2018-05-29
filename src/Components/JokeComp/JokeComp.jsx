@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import delay from 'delay';
+import DelayFunction from '../DelayFunction';
 
 export default class JokeComp extends Component {
   state = {
@@ -18,7 +18,7 @@ export default class JokeComp extends Component {
         const setup = res.data.setup;
         const punchline = res.data.punchline;
         await this.setState({ setup });
-        await delay(5000);
+        await DelayFunction(5000);
         await this.setState({ punchline });
       })
       .catch(err => console.log(err));

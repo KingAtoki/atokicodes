@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Spring, Keyframes, animated } from 'react-spring';
-import delay from 'delay';
+import DelayFunction from './Components/DelayFunction';
 
 import AboutMeComp from './Components/AboutMeComp/AboutMeComp';
 import BioComp from './Components/BioComp/BioComp';
@@ -69,7 +69,7 @@ class App extends Component {
                 zIndex: 99999
               }
             });
-            await delay(1000);
+            await DelayFunction(3000);
             await next(
               Spring,
               {
