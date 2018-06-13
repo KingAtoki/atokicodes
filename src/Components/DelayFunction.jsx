@@ -1,5 +1,3 @@
-'use strict';
-
 const createDelay = willResolve => (ms, value) => {
   let timeoutId;
   let settle;

@@ -69,7 +69,7 @@ class App extends Component {
                 zIndex: 99999
               }
             });
-            await DelayFunction(3000);
+            await DelayFunction(1000);
             await next(
               Spring,
               {
@@ -81,7 +81,7 @@ class App extends Component {
                   background: 'white',
                   position: 'relative',
                   left: 0,
-                  zIndex: 0,
+                  zIndex: 'inherit',
                   boxShadow: '10px 10px 10px transparent'
                 }
               },
