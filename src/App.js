@@ -9,6 +9,7 @@ import SkillsComp from './Components/SkillsComp/SkillsComp';
 import ProjectsComp from './Components/ProjectsComp/ProjectsComp';
 import ScrollingTextComp from './Components/ScrollingTextComp/ScrollingTextComp';
 import JokeComp from './Components/JokeComp/JokeComp';
+import WIPPage from './Components/WIPPage/WIPPage'
 
 const MenuItem = ({ children, onClick, name }) => {
   return (
@@ -36,7 +37,8 @@ const ActivePage = props => {
 class App extends Component {
   state = {
     isReady: false,
-    activePage: ''
+    activePage: '',
+    wip: true,
   };
 
   click = event => {
@@ -44,10 +46,16 @@ class App extends Component {
     this.setState({ activePage: name });
   };
 
+  checkPassword = (password, secretPassword) => {
+    if (password === secretPassword) {
+      this.setState({wip: false});
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Keyframes
+        {!this.state.wip ? <Keyframes
           native
           script={async next => {
             // None of this will cause React to render, the component renders only once :-)
@@ -136,14 +144,14 @@ class App extends Component {
               }
             />
           )}
-        </Keyframes>
+        </Keyframes> : <WIPPage checkPassword={this.checkPassword} />}
         {this.state.isReady ? (
           <div className="active-page">
             <ActivePage activePage={this.state.activePage} />
           </div>
         ) : null}
       </div>
-    );
+      );
   }
 }
 
