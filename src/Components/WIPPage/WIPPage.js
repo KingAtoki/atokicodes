@@ -13,8 +13,8 @@ export default class WIPPage extends Component {
   render() {
     return (
       <div>
-        <h1>Sorry this Amazing Site is still being finished up! <span role="img">🙂</span></h1>
-        <h3>Unless of course you are Chris Atoki himself, then you should be able to pass the test below <span role="img">👇</span></h3>
+        <h1>Sorry this Amazing Site is still being finished up!</h1>
+        <h3>Unless of course you are Chris Atoki himself, then you should be able to pass the test below.</h3>
         <input name='password' value={this.state.password} onChange={this.handleChange}/>
         <button onClick={() => this.props.checkPassword(this.state.password, secretPassword)}>{"I knew the answer."}</button>
       </div>
