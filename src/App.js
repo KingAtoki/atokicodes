@@ -47,7 +47,7 @@ class App extends Component {
   };
 
   checkPassword = (password) => {
-    if (password === 'ChrisAtoki18') {
+    if (password === 'ChrisAtokiIsSoCool') {
       this.setState({wip: false});
     } else {
       alert('Wrong.');
