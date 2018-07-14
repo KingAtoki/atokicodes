@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { secretPassword } from '../../secret';
 
 export default class WIPPage extends Component {
 
@@ -16,7 +15,7 @@ export default class WIPPage extends Component {
         <h1>Sorry this Amazing Site is still being finished up! <span role="img">🙂</span></h1>
         <h3>Unless of course you are Chris Atoki himself, then you should be able to pass the test below <span role="img">👇</span></h3>
         <input name='password' value={this.state.password} onChange={this.handleChange}/>
-        <button onClick={() => this.props.checkPassword(this.state.password, secretPassword)}>{"I knew the answer."}</button>
+        <button onClick={() => this.props.checkPassword(this.state.password)}>{"I knew the answer."}</button>
       </div>
     )
   }

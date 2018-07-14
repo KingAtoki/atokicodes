@@ -46,9 +46,12 @@ class App extends Component {
     this.setState({ activePage: name });
   };
 
-  checkPassword = (password, secretPassword) => {
-    if (password === secretPassword) {
+  checkPassword = (password) => {
+    if (password === 'ChrisAtoki18') {
       this.setState({wip: false});
+    } else {
+      alert('Wrong.');
+      return;
     }
   }
 
